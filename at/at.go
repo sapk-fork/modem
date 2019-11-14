@@ -134,7 +134,6 @@ func (a *AT) Init(ctx context.Context) error {
 
 	cmds := []string{
 		"Z",       // reset to factory defaults (also clears the escape from the rx buffer)
-		"^CURC=0", // disable general indications ^XXXX
 	}
 	for _, cmd := range cmds {
 		_, err := a.Command(ctx, cmd)
